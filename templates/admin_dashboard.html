@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Link to the core styles for the portal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to the Poppins font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container container-admin">
+        <div id="main-dashboard-view">
+            <h1>Admin Dashboard</h1>
+
+            <!-- Filter buttons to view complaints by role -->
+            <div class="filter-buttons">
+                <button onclick="fetchComplaints('All')">All</button>
+                <button onclick="fetchComplaints('Student')">Students</button>
+                <button onclick="fetchComplaints('Faculty')">Faculty</button>
+                <button onclick="fetchComplaints('Non-Teaching Staff')">Non-Teaching Staff</button>
+                <button onclick="fetchComplaints('Security Guard')">Security Guards</button>
+            </div>
+
+            <h2 id="complaints-heading">All Complaints</h2>
+            
+            <!-- Table to display all complaints -->
+            <table id="complaintsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Role</th>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>User Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- This will be populated by the JavaScript file -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Complaint details view (initially hidden) -->
+        <div id="complaint-details-view" class="complaint-details-view">
+            <h2 id="details-title"></h2>
+            <p><strong>Complaint ID:</strong> <span id="details-id"></span></p>
+            <p><strong>User Email:</strong> <span id="details-user-email"></span></p>
+            <p><strong>Role:</strong> <span id="details-role"></span></p>
+            <p><strong>Category:</strong> <span id="details-category"></span></p>
+            <p><strong>Status:</strong> <span id="details-status"></span></p>
+            <hr>
+            <h3>Description:</h3>
+            <p id="details-description"></p>
+            
+            <button class="go-back-button" onclick="goBackToList()">Go Back</button>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file with the dashboard logic -->
+    <script src="js/admin_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Link to the core styles for the portal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to the Poppins font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form id="registerForm">
+            <label for="role">Role</label>
+            <div class="input-icon-container">
+                <div class="icon-input">
+                    <i class="fas fa-user-tag"></i>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="Student">Student</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Non-Teaching Staff">Non-Teaching Staff</option>
+                        <option value="Security Guard">Security Guard</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="email">Email</label>
+            <div class="input-icon-container">
+                <div class="icon-input">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <label for="password">Password</label>
+            <div class="input-icon-container">
+                <div class="icon-input">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+        <div class="link-container">
+            <p>Already have an account? <a href="index.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

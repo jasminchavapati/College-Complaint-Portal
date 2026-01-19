@@ -1,0 +1,316 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1665652475985-37e285aeff53?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMGdyYWRpZW50fGVufDB8fDB8fHww');
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.container {
+    background: rgba(10, 5, 25, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 70px rgba(255, 0, 255, 0.6);
+    transform: translateY(-5px);
+}
+
+h1, h2 {
+    text-align: center;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    transition: all 0.3s;
+}
+
+h1:hover, h2:hover {
+    text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ffff;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    padding-left: 3rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+form input[type="text"]:hover,
+form input[type="password"]:hover,
+form input[type="email"]:hover,
+form textarea:hover,
+form select:hover {
+    border-color: #ff00ff;
+}
+
+form select {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    padding-left: 12px;
+}
+
+form select option {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Styles for the admin dashboard's filter buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-buttons button {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 0, 255, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    background-color: rgba(10, 5, 25, 0.8);
+    color: #f0f0f0;
+}
+
+th {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(15, 7, 30, 0.8);
+}
+
+tr:hover {
+    background-color: rgba(20, 10, 40, 0.9);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* New styles for action buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Default style for all action buttons */
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+}
+
+.action-buttons button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Style for disabled buttons */
+.action-buttons button:disabled {
+    background-color: #555 !important;
+    color: #bbb !important;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+.message-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.message-box.success {
+    background-color: #28a745;
+}
+
+.message-box.error {
+    background-color: #dc3545;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.complaint-details-view {
+    display: none;
+    padding: 20px;
+    background: rgba(10, 5, 25, 0.8);
+    color: #f0f0f0;
+}
+
+.complaint-details-view h3 {
+    color: #00ffff;
+    margin-top: 0;
+}
+
+.complaint-details-view p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.complaint-details-view strong {
+    color: #e0e0e0;
+}
+
+.go-back-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #d32f2f;
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.link-container a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s;
+}
+
+.link-container a:hover {
+    color: #ff00ff;
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
